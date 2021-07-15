@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MetaTags from 'react-meta-tags';
 import './App.css'
 
 
@@ -97,6 +98,9 @@ export class ApiWeather extends Component {
        const imgSrc = ` https://flagcdn.com/16x12/${countryFlag}.png`
         return (
             <div>
+                <MetaTags>
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+          </MetaTags>
                 {
                 info===true?
                     <div className ='weather'>
